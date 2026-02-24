@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SupportTicketAPI.DTOs.TicketComment;
 using SupportTicketAPI.Middleware;
-using SupportTicketAPI.Models;
 using SupportTicketAPI.Services;
+using SupportTicketAPI.Models;
 
 namespace SupportTicketAPI.Controllers;
 

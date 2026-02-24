@@ -9,7 +9,7 @@ namespace SupportTicketAPI.Controllers;
 
 [ApiController]
 [Route("users")]
-[Authorize(Roles = "MANAGER")]
+[Authorize(Roles = "Manager")]
 public class UsersController(IUserService userService, IValidator<CreateUserDto> validator) : ControllerBase
 {
     /// <summary>Create user (MANAGER only)</summary>

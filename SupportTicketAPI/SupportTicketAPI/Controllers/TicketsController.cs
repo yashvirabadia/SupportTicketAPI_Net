@@ -26,9 +26,8 @@ public class TicketsController(
 
     // ─── Tickets ─────────────────────────────────────────────────────────────
 
-    /// <summary>Create ticket (USER, MANAGER)</summary>
     [HttpPost]
-    [Authorize(Roles = "USER,MANAGER")]
+    [Authorize(Roles = "User,Manager")]
     [ProducesResponseType(typeof(TicketResponseDto), 201)]
     [ProducesResponseType(400)]
     [ProducesResponseType(401)]
@@ -43,7 +42,7 @@ public class TicketsController(
         return StatusCode(201, ticket);
     }
 
-    /// <summary>Get tickets (MANAGER=all, SUPPORT=assigned, USER=own)</summary>
+ 
     [HttpGet]
     [ProducesResponseType(typeof(List<TicketResponseDto>), 200)]
     [ProducesResponseType(401)]
@@ -55,7 +54,7 @@ public class TicketsController(
 
     /// <summary>Assign ticket (MANAGER, SUPPORT)</summary>
     [HttpPatch("{id}/assign")]
-    [Authorize(Roles = "MANAGER,SUPPORT")]
+    [Authorize(Roles = "Manager,Support")]
     [ProducesResponseType(typeof(TicketResponseDto), 200)]
     [ProducesResponseType(400)]
     [ProducesResponseType(401)]
@@ -77,9 +76,9 @@ public class TicketsController(
         };
     }
 
-    /// <summary>Update ticket status (MANAGER, SUPPORT)</summary>
+ 
     [HttpPatch("{id}/status")]
-    [Authorize(Roles = "MANAGER,SUPPORT")]
+    [Authorize(Roles = "Manager,Support")]
     [ProducesResponseType(typeof(TicketResponseDto), 200)]
     [ProducesResponseType(400)]
     [ProducesResponseType(401)]
@@ -101,9 +100,9 @@ public class TicketsController(
         };
     }
 
-    /// <summary>Delete ticket (MANAGER only)</summary>
+
     [HttpDelete("{id}")]
-    [Authorize(Roles = "MANAGER")]
+    [Authorize(Roles = "Manager")]
     [ProducesResponseType(204)]
     [ProducesResponseType(401)]
     [ProducesResponseType(403)]
