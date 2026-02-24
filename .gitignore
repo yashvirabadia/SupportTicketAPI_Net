@@ -1,0 +1,61 @@
+# ==============================
+# .NET / ASP.NET Core
+# ==============================
+
+bin/
+obj/
+*.user
+*.rsuser
+*.suo
+*.userprefs
+
+# Build results
+Debug/
+Release/
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Visual Studio
+.vs/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# EF Core Migrations Snapshots (optional but recommended to keep migrations)
+# Remove this line if you want to track snapshots
+# Migrations/*Designer.cs
+
+# Secrets
+appsettings.Development.json
+appsettings.Local.json
+
+# Environment variables
+.env
+
+# JWT secrets (if you create separate secret file)
+secrets.json
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Publish output
+publish/
+
+# Node (if frontend later)
+node_modules/
+dist/
+
+# Temporary files
+*.tmp
+*.temp
